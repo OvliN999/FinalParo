@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -20,7 +20,8 @@
             color: #ffffff;
         }
 
-        /* --- VIDEO BACKGROUND --- */
+        /* --- BACKGROUND IMAGE --- */
+        /* Using the same class name so existing styles apply */
         .video-bg {
             position: fixed;
             top: 0;
@@ -79,7 +80,7 @@
             justify-content: center;
         }
 
-        /* --- GLASSMORPHISM CARDS (UPDATED FOR LINKS) --- */
+        /* --- GLASSMORPHISM CARDS --- */
         .card {
             flex: 1;
             height: 250px;
@@ -100,8 +101,8 @@
             box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
             
             /* Anchor Tag Specific Resets */
-            text-decoration: none; /* Remove underline */
-            color: #ffffff; /* Keep text white */
+            text-decoration: none; 
+            color: #ffffff; 
 
             /* Animation Setup */
             opacity: 0;
@@ -119,7 +120,7 @@
             font-weight: 300;
             letter-spacing: 2px;
             z-index: 2;
-            pointer-events: none; /* Let clicks pass to card */
+            pointer-events: none; 
         }
 
         /* --- HOVER EFFECTS --- */
@@ -201,7 +202,7 @@
             }
             
             body {
-                overflow-y: auto; /* Allow scroll on mobile if content is tall */
+                overflow-y: auto; 
             }
             
             .container {
@@ -215,31 +216,24 @@
 </head>
 <body>
 
-    <!-- 1. FULL SCREEN VIDEO BACKGROUND -->
-    <video class="video-bg" autoplay muted loop playsinline poster="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
-       <source src="client%20bday%20project/front.png">
-     </video>
+    <img 
+        class="video-bg" 
+        src="https://github.com/OvliN999/FinalParo/blob/main/client%20bday%20project/front.png?raw=true" 
+        alt="Background Image"
+    >
 
-    <!-- Overlay for readability -->
     <div class="overlay"></div>
 
-    <!-- MAIN CONTENT -->
     <div class="container">
         
-        <!-- 2. TOP HEADING -->
         <h1 class="main-title">GALLERY</h1>
 
-        <!-- 3. CLICKABLE BOXES AS LINKS -->
         <div class="card-wrapper">
             
-            <!-- Left Box (Link 1) -->
-            <!-- REPLACE 'birthday.html' WITH YOUR ACTUAL LINK -->
             <a href="https://paropw.vercel.app/" class="card" id="btn-birthday">
                 <h2>Birthday</h2>
             </a>
 
-            <!-- Right Box (Link 2) -->
-            <!-- REPLACE 'note.html' WITH YOUR ACTUAL LINK -->
             <a href="https://note-pi-bice.vercel.app/" class="card" id="btn-note">
                 <h2>Note</h2>
             </a>
@@ -248,11 +242,8 @@
 
     </div>
 
-    <!-- 7. INTERNAL JAVASCRIPT (Minimal) -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // JS is minimal now as links handle navigation.
-            // You can add tracking or extra logic here if needed.
             console.log("Gallery Loaded");
         });
     </script>
